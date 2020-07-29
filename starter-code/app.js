@@ -24,9 +24,9 @@ app.get('/beers', (req, res) => {
     .then((beersFromApi) => {
       //this is the result of what database gives us
       console.log('Beers from the database: ', beersFromApi);
-      res.render('beers', { beersFromApi }); //render exits the function so has to come last. have to put beers array in an object with the array as a key and value
+      res.render('beers', { beersFromApi }); //render exits the function so has to come last. Make sure to put beers array in an object with the array as a key and value
     })
-    .catch((error) => console.log('Error rendering beers', error));
+    .catch((error) => conmsole.log('Error rendering beers', error));
 });
 
 app.get('/random-beers', (req, res) => {
